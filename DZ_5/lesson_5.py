@@ -5,13 +5,13 @@
 
 
 import random
-count = 1
+# count = 1
 x = random.randint(1, 10)
 a = -1
 while a != x:
 	a = int(input('ввести загаданное число: '))
 	if a == x:
-		print('Ты угадал загаданное число')
+		print('Ты угадал число')
 	elif a < x:
 		print('Загаданное число больше.')
 	else:
