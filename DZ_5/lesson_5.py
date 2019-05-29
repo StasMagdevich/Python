@@ -40,32 +40,24 @@ print('начиная с ' + str(cell) + ' клетки')
 
 #----------------------------------------------------------------------------------------------------------------
 
-
 #Напечатать таблицу Пифагора заданной конфигурации.
 
-k = 0
-i = 0
-while 0 < i <= 10 and 0 < k <= 10:
-        num = i * k
-        if num < 10:
+for k in range(0, 11):
+    for i in range(0, 11):
+        result = k * i
+        if result < 10:
             empty = "  "
         else:
-            if num < 100:
+            if result < 100:
                 empty  = " "
-        if k == 0:
-            if i == 0:
+        if i == 0:
+            if k == 0:
                 print("    ", end = '')
             else:
-                print("  ", i, end='')
-        elif i == 0:
-            print("  ", k, end='')
+                print("  ", k, end='')
+        elif k == 0:
+            print("  ", i, end='')
         else:
-            print(empty, num, end = '')#ВОТ ВОЗЛЕ ЭТОЙ ПОСЛЕДНЕЙ СКОБКИ У МЕНЯ КРАСНОЕ НЕБОЛЬШОЕ ПОДЧЕРКИВАНИЕ, КОТОРОЕ НЕДАЕТ МНЕ ЗАПУСТИТЬ КОД. В ЧЕМ ПРОБЛЕМА?????
-        #File
-        #"C:/Users/Stas/PycharmProjects/lesson_1/lesson_5.py", line 64
-        #print()
-        #^
-        #IndentationError: unindent does not match any outer  indentation level
+            print(empty, result, end = '')
     print()
-
 #-------------------------------------------------------------------------------------------------
