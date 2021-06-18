@@ -4,6 +4,11 @@ import os
 import pprint
 import datetime
 
+
+def cleaning():
+	os.remove("sql_dqr_redshift_item || sql_dqr_redshift_payment_method || sql_dqr_redshift_message || sql_dqr_redshift_message_deleted.sql")
+
+
 def git_push():
 	now = datetime.datetime.now()
 	now = str(now.strftime("%Y-%m-%d %H:%M"))
@@ -11,6 +16,7 @@ def git_push():
 	os.system("git commit -am '%s'" % now)
 	os.system("git push origin master")
 if __name__=="__main__":
+	cleaning()
 	pp = pprint.PrettyPrinter(indent=1, width=1000)
 	db = MySQLdb.connect(host="terminal.dwh.slicetest.com", user="qa", password="1234", database="qatestsautomationdb")
 	cursor = db.cursor()
