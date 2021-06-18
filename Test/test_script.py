@@ -7,6 +7,7 @@ import datetime
 def git_push():
 	now = datetime.datetime.now()
 	now = str(now.strftime("%Y-%m-%d %H:%M"))
+	os.system("git add *")
 	os.system("git commit -am '%s'" % now)
 	os.system("git push origin master")
 if __name__=="__main__":
