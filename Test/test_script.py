@@ -6,13 +6,13 @@ import datetime
 
 
 def cleaning():
-	os.remove("sql_dqr_redshift_item || sql_dqr_redshift_payment_method || sql_dqr_redshift_message || sql_dqr_redshift_message_deleted.sql")
+	os.system("rm -r DQR")
 
 
 def git_push():
 	now = datetime.datetime.now()
 	now = str(now.strftime("%Y-%m-%d %H:%M"))
-	os.system("git add *")
+	os.system("git add DQR ")
 	os.system("git commit -am '%s'" % now)
 	os.system("git push origin master")
 if __name__=="__main__":
