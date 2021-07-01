@@ -1,1 +1,0 @@
-"'[{\'sql_\': ""update\\n  cds.message_deleted\\nset\\n  subject = REGEXP_REPLACE(\\n    subject,\\n    \'(.*[Pp]ayment [Pp]rocessed for [Aa]ccount [Ee]nding in).*\',\\n    \'\\\\\\\\1 ^account_id^\'\\n  ),\\n  cds_update_time = sysdate\\nWHERE\\n  subject ILIKE \'%payment processed for account ending in%\'""}]'"
