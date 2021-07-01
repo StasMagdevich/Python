@@ -1,0 +1,1 @@
+"[{'sql_': ""update baikal.message\nset subject = \nREGEXP_REPLACE(subject, '(.*[Pp]ayment [Pp]rocessed for [Aa]ccount [Ee]nding in).*', '\\\\1 ^account_id^'), cds_update_time = sysdate\nWHERE \nsubject ILIKE '%payment processed for account ending in%'""}]"
