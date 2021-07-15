@@ -1,1 +1,0 @@
-/*lz_pii_transaction_id-message-redshift*/\\nupdate\\n  cds.item\\nset\\n  description = REGEXP_REPLACE (\\n    description\,\\n    '(Cancellation Confirmation (Hi|Hello|Good Morning|Dear)).*'\,\\n    '$1 ^name^'\\n  )\,\\n  cds_update_time = sysdate\\nWHERE\\n  order_merchant_id = 3224\\n  and description SIMILAR TO 'Cancellation Confirmation (Hi|Hello|Good|Dear)%\,'\\n\\n
