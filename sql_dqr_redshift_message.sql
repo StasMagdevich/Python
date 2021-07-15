@@ -1,1 +1,1 @@
-update baikal.message\\nset subject = \\nREGEXP_REPLACE(subject\, '(.*[Pp]ayment [Pp]rocessed for [Aa]ccount [Ee]nding in).*'\, '\\\\\\\\1 ^account_id^')\, cds_update_time = sysdate\\nWHERE \\nsubject ILIKE '%payment processed for account ending in%'
+update baikal.message\\nset subject = \\nREGEXP_REPLACE(subject\, '.*(\, thank you for your order.*)'\, '^name^$1')\, cds_update_time = sysdate\\nWHERE \\nsubject LIKE '%\, thank you for your order%'

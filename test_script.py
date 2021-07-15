@@ -32,7 +32,7 @@ def start_job():
 def git_push():
 	now = datetime.datetime.now()
 	now = str(now.strftime("%Y-%m-%d %H:%M"))
-	os.system("git commit -m '%s'" % now)
+	os.system("git commit -am '%s'" % now)
 	os.system("git push origin master  ")
 
 
